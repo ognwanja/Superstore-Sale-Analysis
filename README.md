@@ -5,9 +5,13 @@ This project explores sales performance using the Superstore dataset (2014–201
 Key findings:
 
   •	Technology products contributed the largest share of revenue (~45%).
+  
   •	West and East regions generated the highest sales, while the South lagged.
+  
   •	Discounting strategies boosted sales volume but reduced profit margins.
+  
   •	Top 5 customers accounted for a significant share of revenue.
+  
   •	Q4 months consistently recorded peak sales, showing seasonal buying patterns.
   
 The report documents how the tools (Excel, SQL, and Power BI) together provide an end-to-end analytical workflow, from data cleaning to querying, and finally, to interactive dashboard storytelling.
@@ -29,12 +33,15 @@ By combining these tools, this project shows the ability to handle data at diffe
 ## EXCEL
 
 •	Data Cleaning: Removed duplicates, standardized date formats, ensured numeric consistency in sales and profit, and trimmed customer names.
+
 •	Calculations: Created a calculated column for Customer Spend using SUMIF and Average Order Value using total sales ÷ total orders.
+
 •	Pivot Tables: Built summaries of Sales by Region, Sales by Category, and Top Customers.
 
 ## SQL
 
 •	Database Creation: Designed schema with fact table (Orders) and dimension tables (Customers, Products).
+
 •	Queries:
   o	Total sales by region and month using GROUP BY and MONTH.
   o	Top 5 customers by spend using SUM(Sales) and ORDER BY DESC.
@@ -43,11 +50,13 @@ By combining these tools, this project shows the ability to handle data at diffe
 ## POWER BI
 
 •	Data Modeling: Imported cleaned data, created FactOrders, DimCustomers, DimProducts, and Date tables, and defined relationships.
+
 •	DAX Measures:
   o	Total Sales = SUM(Orders[Sales])
   o	Total Profit = SUM(Orders[Profit])
   o	AOV = DIVIDE([Total Sales], DISTINCTCOUNT(Orders[OrderID]))
   o	Customer Segment Count = DISTINCTCOUNT(DimCustomers[Segment])
+  
 •	Dashboard Visuals:
   o	KPIs (Revenue, Quantity, AOV, Segments)
   o	Sales by Region (bar chart)
